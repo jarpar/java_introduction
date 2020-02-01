@@ -1,5 +1,7 @@
 package introduction;
 
+import java.util.Locale;
+
 public class SimpleTypes {
     public static void main(String[] args) {
         int age;
@@ -17,8 +19,17 @@ public class SimpleTypes {
         System.out.println(PI);
 
         boolean isPaid = false;
-        System.out.println(isPaid);
+        String isPaidTxt = isPaid ? "Tak" : "Nie";
+        System.out.println(isPaidTxt);
         isPaid = true;
-        System.out.println(isPaid);
+        isPaidTxt = isPaid ? "Tak" : "Nie";
+        System.out.println(isPaidTxt);
+
+        String name = null;
+        name = "Jarek";
+        System.out.println(name.toUpperCase(Locale.ENGLISH) + " " + name.length());
+
+        char thirdLetter = name.charAt(2);
+        System.out.println(thirdLetter);
     }
 }
