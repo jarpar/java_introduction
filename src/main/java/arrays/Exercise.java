@@ -6,8 +6,7 @@ public class Exercise {
         //znajdź max, min w tablicy
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-        for (int i : numbers
-        ) {
+        for (int i : numbers) {
             if (i > max) {
                 max = i;
             }
