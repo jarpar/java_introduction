@@ -6,6 +6,7 @@ public class Exercise {
         //znajdź max, min w tablicy
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
+        double mean = 0.0D;
         for (int i : numbers) {
             if (i > max) {
                 max = i;
@@ -13,8 +14,10 @@ public class Exercise {
             if (i < min) {
                 min = i;
             }
+            mean += i;
         }
         System.out.println("max: " + max);
         System.out.println("min: " + min);
+        System.out.println("średnia: " + mean / numbers.length);
     }
 }
