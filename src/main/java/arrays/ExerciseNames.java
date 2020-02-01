@@ -7,9 +7,9 @@ public class ExerciseNames {
         String[] names = new String[]{"Ala", "Ola", "Andrzej", "Brunhilda", "Gienia", "Bożydar", "Gniewomir", "Sławomir", "Mścisław", "Stanisław", "Bronisław", "Wiercisław", "Petronela", "Kunegunda"};
         /*
         1. wypisz imiona żeńskie -a
-        2. imiona żeńskie nie dł↓ższe niż 3
+        2. imiona żeńskie nie dłuższe niż 3
         3. imiona słowiańskie -mir oraz -sław
-        4.najdłuższe imię
+        4. najdłuższe imię
          */
         System.out.println("Imiona żeńskie to: ");
         for (String name : names) {
