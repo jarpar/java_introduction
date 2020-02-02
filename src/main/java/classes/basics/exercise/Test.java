@@ -8,10 +8,11 @@ public class Test {
         double distance = Point.distance(point1, point2);
         System.out.println(distance);
 
-        distance = point1.distance(point2);
+        distance = point1.distanceTo(point2);
         System.out.println(distance);
 
-        distance = point2.distance(point1);
+        distance = point2.distanceTo(point1);
         System.out.println(distance);
+
     }
 }
