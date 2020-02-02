@@ -5,7 +5,7 @@ class User {
     String lastname;
     int age;
 
-    static int minAge = 18;
+    static final int MIN_AGE = 18;
 
     User(String name, String lastname, int age) {
         this.name = name;
@@ -26,6 +26,6 @@ class User {
     }
 
     boolean isAdult() {
-        return age >= minAge;
+        return age >= MIN_AGE;
     }
 }

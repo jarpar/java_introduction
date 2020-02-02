@@ -27,10 +27,8 @@ public class Test {
         System.out.println(ania);
         System.out.println(cloneAnia);
         System.out.println(ania.isAdult());
-        //ania.minAge = 16;
         System.out.println("#### TEST WIEKU ####");
         System.out.println("Czy Ania jest dorosła? " + ania.isAdult());
         System.out.println("Czy Jarek jest dorosły? " + jarek.isAdult());
-
     }
 }
