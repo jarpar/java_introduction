@@ -22,4 +22,5 @@ public class PointCollection {
     void printPoint(Point point) {
         System.out.println("Point(x: " + point.getX() + ", y: " + point.getY() + ")");
     }
+
 }
