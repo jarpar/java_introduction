@@ -9,13 +9,14 @@ public class Test {
         jarek.age = 30;
 
         System.out.println(jarek.name + " " + jarek.lastname + " " + jarek.age);
+        System.out.println(jarek.isAdult());
         System.out.println();
 
         jarek.introduce();
 
         System.out.println();
 
-        User ania = new User("Anna", "Kowalska", 25);
+        User ania = new User("Anna", "Kowalska", 17);
         ania.introduce();
         System.out.println();
 
@@ -25,5 +26,11 @@ public class Test {
         cloneAnia.introduce();
         System.out.println(ania);
         System.out.println(cloneAnia);
+        System.out.println(ania.isAdult());
+        //ania.minAge = 16;
+        System.out.println("#### TEST WIEKU ####");
+        System.out.println("Czy Ania jest dorosła? " + ania.isAdult());
+        System.out.println("Czy Jarek jest dorosły? " + jarek.isAdult());
+
     }
 }

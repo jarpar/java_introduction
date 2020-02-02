@@ -5,11 +5,7 @@ class User {
     String lastname;
     int age;
 
-    void introduce() {
-        System.out.println("Imię: " + name);
-        System.out.println("Nazwisko: " + lastname);
-        System.out.println("Wiek: " + age);
-    }
+    static int minAge = 18;
 
     User(String name, String lastname, int age) {
         this.name = name;
@@ -21,5 +17,15 @@ class User {
         name = other.name;
         lastname = other.lastname;
         age = other.age;
+    }
+
+    void introduce() {
+        System.out.println("Imię: " + name);
+        System.out.println("Nazwisko: " + lastname);
+        System.out.println("Wiek: " + age);
+    }
+
+    boolean isAdult() {
+        return age >= minAge;
     }
 }
