@@ -1,4 +1,4 @@
-package classes;
+package classes.basics;
 
 public class Test {
     public static void main(String[] args) {
@@ -17,5 +17,13 @@ public class Test {
 
         User ania = new User("Anna", "Kowalska", 25);
         ania.introduce();
+        System.out.println();
+
+        User cloneAnia = new User(ania);
+        cloneAnia.introduce();
+        cloneAnia.name = "Beata";
+        cloneAnia.introduce();
+        System.out.println(ania);
+        System.out.println(cloneAnia);
     }
 }
