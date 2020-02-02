@@ -48,7 +48,7 @@ public class PointCollection {
                 count++;
             }
         }
-        System.out.println("min:" + min);
+        System.out.println("min: " + min);
         System.out.println("max: " + max);
         System.out.println("Średnia: " + mid / count);
     }
