@@ -18,8 +18,12 @@ public class Test {
 
         PointCollection pointCollection = new PointCollection();
         //pointCollection.addPoints(point1);
-        pointCollection.addPoints(point2, point1);
+        pointCollection.addPoints(point1, point2);
         //pointCollection.addPoints(new Point[]{point1, point2});
+        pointCollection.addPoints(new Point(5.0D, 8.0D));
+        pointCollection.addPoints(new Point(13.0D, 17.0D));
+        pointCollection.addPoints(new Point(30.0D, 22.0D));
+        pointCollection.addPoints(new Point(43.0D, 47.0D));
         pointCollection.printAllPoints();
 
         User user = new User("Janek", "Kowalski", 23);
@@ -28,6 +32,7 @@ public class Test {
         user.introduce();
         point1.coordinates();
         System.out.println("------------------------------------------------");
+        pointCollection.printAllPoints();
         pointCollection.printStats();
     }
 }
