@@ -27,5 +27,7 @@ public class Test {
         user.name = "Andrzej";
         user.introduce();
         point1.coordinates();
+        System.out.println("------------------------------------------------");
+        pointCollection.printStats();
     }
 }

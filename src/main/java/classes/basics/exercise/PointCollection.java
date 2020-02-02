@@ -23,4 +23,30 @@ public class PointCollection {
         System.out.println("Point(x: " + point.getX() + ", y: " + point.getY() + ")");
     }
 
+    public void printStats() {
+        //wypisz najmiejszy, największy i średni dystans między punktami
+        //tip: nie porównuj punktu samego ze sobą
+        double min = Double.MAX_VALUE;
+        double mid;
+        double max = Double.MIN_VALUE;
+        for (int i = 0; i < pointNumber; i++) {
+            Point point1 = points[i];
+            for (int j = 0; j < pointNumber; j++) {
+                Point point2 = points[j];
+                if (point1 == point2) {
+                    continue;
+                }
+
+                double distance = point1.distanceTo(point2);
+                if (distance < min) {
+                    min = distance;
+                }
+                if (distance > max) {
+                    max = distance;
+                }
+            }
+        }
+        System.out.println("min:" + min);
+        System.out.println("max: " + max);
+    }
 }
