@@ -1,13 +1,13 @@
 package classes.basics;
 
-class User {
+public class User {
     String name;
     String lastname;
     int age;
 
     static final int MIN_AGE = 18;
 
-    User(String name, String lastname, int age) {
+    public User(String name, String lastname, int age) {
         this.name = name;
         this.lastname = lastname;
         this.age = age;
@@ -19,7 +19,7 @@ class User {
         age = other.age;
     }
 
-    void introduce() {
+    public void introduce() {
         System.out.println("Imię: " + name);
         System.out.println("Nazwisko: " + lastname);
         System.out.println("Wiek: " + age);

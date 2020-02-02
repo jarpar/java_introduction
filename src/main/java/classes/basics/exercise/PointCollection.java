@@ -1,6 +1,5 @@
 package classes.basics.exercise;
-
-public class PointCollection {
+ public class PointCollection {
     Point[] points = new Point[100];
     int pointNumber = 0;
 

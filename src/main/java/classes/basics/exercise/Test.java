@@ -1,5 +1,7 @@
 package classes.basics.exercise;
 
+import classes.basics.User;
+
 public class Test {
     public static void main(String[] args) {
         Point point1 = new Point(3.0D, 1.0D);
@@ -19,5 +21,8 @@ public class Test {
         pointCollection.addPoints(point2, point1);
         //pointCollection.addPoints(new Point[]{point1, point2});
         pointCollection.printAllPoints();
+
+        User user = new User("Janek", "Kowalski", 23);
+        user.introduce();
     }
 }
