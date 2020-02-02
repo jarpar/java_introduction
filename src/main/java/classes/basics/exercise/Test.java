@@ -24,5 +24,8 @@ public class Test {
 
         User user = new User("Janek", "Kowalski", 23);
         user.introduce();
+        user.name = "Andrzej";
+        user.introduce();
+        point1.coordinates();
     }
 }

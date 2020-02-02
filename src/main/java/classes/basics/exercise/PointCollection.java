@@ -1,5 +1,6 @@
 package classes.basics.exercise;
- public class PointCollection {
+
+public class PointCollection {
     Point[] points = new Point[100];
     int pointNumber = 0;
 
@@ -12,13 +13,13 @@ package classes.basics.exercise;
 
     //wypisz wszystkie elementy tablicy this.points od 0 do (this.pointNumber -1):
 
-    void printAllPoints(Point ... points) {
+    void printAllPoints(Point... points) {
         for (int i = 0; i < pointNumber; i++) {
             printPoint(this.points[i]);
         }
     }
 
     void printPoint(Point point) {
-        System.out.println("Point(x: " + point.x + ", y: " + point.y + ")");
+        System.out.println("Point(x: " + point.getX() + ", y: " + point.getY() + ")");
     }
 }

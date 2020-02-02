@@ -1,9 +1,9 @@
 package classes.basics;
 
 public class User {
-    String name;
-    String lastname;
-    int age;
+    public String name;
+    public String lastname;
+    public int age;
 
     static final int MIN_AGE = 18;
 
@@ -13,7 +13,7 @@ public class User {
         this.age = age;
     }
 
-    User(User other) {
+    public User(User other) {
         name = other.name;
         lastname = other.lastname;
         age = other.age;
