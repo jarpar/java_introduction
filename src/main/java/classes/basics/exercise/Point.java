@@ -1,7 +1,5 @@
 package classes.basics.exercise;
 
-import java.awt.*;
-
 public class Point {
     double x;
     double y;

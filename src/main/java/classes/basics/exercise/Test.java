@@ -14,5 +14,10 @@ public class Test {
         distance = point2.distanceTo(point1);
         System.out.println(distance);
 
+        PointCollection pointCollection = new PointCollection();
+        //pointCollection.addPoints(point1);
+        pointCollection.addPoints(point2, point1);
+        //pointCollection.addPoints(new Point[]{point1, point2});
+        pointCollection.printAllPoints();
     }
 }
