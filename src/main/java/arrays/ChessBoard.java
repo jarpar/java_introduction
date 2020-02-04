@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class ChessBoard {
     public static void main(String[] args) {
-        board(x(), y());
+        ChessBoard chessBoard = new ChessBoard();
+        chessBoard.toString();
+    }
+
+    @Override
+    public String toString() {
+        return print(x(), y());
     }
 
     static int x() {
@@ -19,7 +25,7 @@ public class ChessBoard {
         return scanner.nextInt();
     }
 
-    static void board(int x, int y) {
+    static String print(int x, int y) {
         String[][] board = new String[x][y];
         String last = "#";
         for (int i = 0; i < x; i++) {
@@ -42,5 +48,6 @@ public class ChessBoard {
                 System.out.print(board[i][j] + " ");
             }
         }
+        return null;
     }
 }
