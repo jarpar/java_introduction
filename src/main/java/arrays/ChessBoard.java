@@ -17,41 +17,53 @@ class ChessBoard {
     static int x() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj X: ");
-        return scanner.nextInt();
+        try {
+            return scanner.nextInt();
+        } catch (Exception e) {
+            return -1;
+        }
     }
 
     static int y() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj Y: ");
-        return scanner.nextInt();
+        try {
+            return scanner.nextInt();
+        } catch (Exception e) {
+            return -1;
+        }
     }
 
     static String print(int x, int y) {
-        String[][] board = new String[x][y];
-        String last = "#";
-        StringBuilder stringBuilder = new StringBuilder();
-        String string;
-        for (int i = 0; i < x; i++) {
-            if (y % 2 == 0) {
-                if ("*".equals(last)) {
-                    last = "#";
-                } else {
-                    last = "*";
+        if (x < 0 || y < 0) {
+            return "Błędna wartość!";
+        } else {
+            String[][] board = new String[x][y];
+            String last = "#";
+            StringBuilder stringBuilder = new StringBuilder();
+            String string;
+            for (int i = 0; i < x; i++) {
+                if (y % 2 == 0) {
+                    if ("*".equals(last)) {
+                        last = "#";
+                    } else {
+                        last = "*";
+                    }
+                }
+                stringBuilder.append("\r\n");
+                for (int j = 0; j < y; j++) {
+                    if ("*".equals(last)) {
+                        last = "#";
+                        board[i][j] = last;
+                    } else {
+                        last = "*";
+                        board[i][j] = last;
+                    }
+                    stringBuilder.append(board[i][j]).append(" ");
                 }
             }
-            stringBuilder.append("\r\n");
-            for (int j = 0; j < y; j++) {
-                if ("*".equals(last)) {
-                    last = "#";
-                    board[i][j] = last;
-                } else {
-                    last = "*";
-                    board[i][j] = last;
-                }
-                stringBuilder.append(board[i][j]).append(" ");
-            }
+            string = stringBuilder.toString();
+            return string;
         }
-        string = stringBuilder.toString();
-        return string;
     }
 }
