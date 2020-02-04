@@ -20,7 +20,7 @@ class ChessBoard {
         try {
             return scanner.nextInt();
         } catch (Exception e) {
-            return -1;
+            return 0;
         }
     }
 
@@ -30,12 +30,12 @@ class ChessBoard {
         try {
             return scanner.nextInt();
         } catch (Exception e) {
-            return -1;
+            return 0;
         }
     }
 
     static String print(int x, int y) {
-        if (x < 0 || y < 0) {
+        if (x <= 0 || y <= 0) {
             return "Błędna wartość!";
         } else {
             String[][] board = new String[x][y];
