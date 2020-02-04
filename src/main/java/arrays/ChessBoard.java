@@ -1,8 +1,22 @@
 package arrays;
 
+import java.util.Scanner;
+
 public class ChessBoard {
     public static void main(String[] args) {
-        board(8, 8);
+        board(x(), y());
+    }
+
+    static int x() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj X: ");
+        return scanner.nextInt();
+    }
+
+    static int y() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj Y: ");
+        return scanner.nextInt();
     }
 
     static void board(int x, int y) {
