@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ChessBoard {
     public static void main(String[] args) {
         ChessBoard chessBoard = new ChessBoard();
-        chessBoard.toString();
+        System.out.println(chessBoard);
     }
 
     @Override
@@ -28,6 +28,8 @@ public class ChessBoard {
     static String print(int x, int y) {
         String[][] board = new String[x][y];
         String last = "#";
+        StringBuilder stringBuilder = new StringBuilder();
+        String string;
         for (int i = 0; i < x; i++) {
             if (y % 2 == 0) {
                 if ("*".equals(last)) {
@@ -36,7 +38,7 @@ public class ChessBoard {
                     last = "*";
                 }
             }
-            System.out.println();
+            stringBuilder.append("\r\n");
             for (int j = 0; j < y; j++) {
                 if ("*".equals(last)) {
                     last = "#";
@@ -45,9 +47,10 @@ public class ChessBoard {
                     last = "*";
                     board[i][j] = last;
                 }
-                System.out.print(board[i][j] + " ");
+                stringBuilder.append(board[i][j]).append(" ");
             }
         }
-        return null;
+        string = stringBuilder.toString();
+        return string;
     }
 }

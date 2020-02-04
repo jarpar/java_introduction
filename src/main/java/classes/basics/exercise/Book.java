@@ -38,5 +38,4 @@ public class Book {
                 ", isbn='" + isbn + '\'' +
                 '}';
     }
-
 }
