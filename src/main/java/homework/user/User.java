@@ -60,8 +60,8 @@ public class User {
 
     public void setHeight() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj wzrost: ");
         height = scanner.nextInt();
-        this.height = height;
     }
 
     public String getBirthDate() {
