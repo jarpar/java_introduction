@@ -47,3 +47,4 @@ public class Point {
         System.out.println("Distance between " + point1.toString() + " and " + point2.toString() + " is: " + distance(point1, point2));
     }
 }
+//Distance between Point{x=1.5, y=2.5} and Point{x=3.5, y=4.5} is: 2.8284271247461903
