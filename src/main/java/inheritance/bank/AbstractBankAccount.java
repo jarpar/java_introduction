@@ -9,7 +9,18 @@ public abstract class AbstractBankAccount {
         this.cashAmount = cashAmount;
     }
 
-    public abstract int withdraw(int amount);
+    public int withdraw(int amount) {
+        int returnAmount = 0;
+        if (getMaxAmount() >= amount) {
+            cashAmount -= amount;
+            returnAmount = amount;
+        } else {
+            System.out.println("Nie masz wystarczającej kwoty na koncie. Pozostało: " + cashAmount);
+        }
+        return returnAmount;
+    }
+
+    protected abstract int getMaxAmount();
 
     public String getOwner() {
         return owner;
@@ -26,4 +37,5 @@ public abstract class AbstractBankAccount {
     public void setCashAmount(int cashAmount) {
         this.cashAmount = cashAmount;
     }
+
 }

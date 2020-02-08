@@ -7,13 +7,9 @@ public class StandardBankAccount extends AbstractBankAccount {
     }
 
     @Override
-    public int withdraw(int amount) {
-        if (getCashAmount() >= amount) {
-            setCashAmount(getCashAmount() - amount);
-            return amount;
-        } else {
-            System.out.println("Nie masz wystarczającej kwoty na koncie. Pozostało: " + getCashAmount());
-            return 0;
-        }
+    protected int getMaxAmount() {
+        return getCashAmount();
     }
+
+
 }

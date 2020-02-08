@@ -9,8 +9,9 @@ public class DebitBankAccount extends AbstractBankAccount {
         this.debit = debit;
     }
 
+
     @Override
-    public int withdraw(int amount) {
-        return 0;
+    protected int getMaxAmount() {
+        return getCashAmount()+debit;
     }
 }
