@@ -17,11 +17,11 @@ public class Nokia3310 implements Phone {
 
     @Override
     public void sendSms(int number, String content) {
-        System.out.println("Sending SMS: " + content + "to number: " + number);
+        System.out.println("Sending SMS: \"" + content + "\" to number: " + number);
     }
 
     @Override
     public void makeCall(int number) {
-        System.out.println("Calling to " + number + "using Nokia 3310");
+        System.out.println("Calling to " + number + " using Nokia 3310");
     }
 }
