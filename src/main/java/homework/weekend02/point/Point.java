@@ -2,7 +2,7 @@
 2. Dodaj do klasy punkt gettery (accessor) i settery (mutuator) oraz metodę statyczną double distance(Point other),
 obliczającą odległość euklidesową. Wzór: sqrt((x1-x2)^2 + (y1-y2)^2)
  */
-package homework.weekend02;
+package homework.weekend02.point;
 
 public class Point {
     public double x;
