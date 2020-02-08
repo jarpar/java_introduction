@@ -2,11 +2,11 @@ package inheritance.animal;
 
 public class Test {
     public static void main(String[] args) {
-        Animal animal = new Animal("Andrzej", 2);
-        //animal.setName("Andrzej");
-        //animal.setAge(2);
-        animal.voice();
-        System.out.println("---------");
+//        Animal animal = new Animal("Andrzej", 2);
+//        //animal.setName("Andrzej");
+//        //animal.setAge(2);
+//        animal.voice();
+//        System.out.println("---------");
         Lion lion = new Lion();
         lion.setName("Leon");
         lion.setAge(3);

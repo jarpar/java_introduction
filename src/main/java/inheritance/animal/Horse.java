@@ -14,6 +14,7 @@ public class Horse extends Animal {
 
     @Override
     public void voice() {
+        //super.voice();
         System.out.println("Horse " + getName() + " says: Ihahaha!");
     }
 

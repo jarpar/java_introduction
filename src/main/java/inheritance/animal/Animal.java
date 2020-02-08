@@ -1,6 +1,6 @@
 package inheritance.animal;
 
-public class Animal {
+public abstract class Animal {//abstract oznacza,że nie można utworzyć obiektu tej klasy
     private String name;
     private int age;
 
@@ -13,9 +13,7 @@ public class Animal {
 
     }
 
-    public void voice() {
-        System.out.println("Animal " + name + " gives voice!");
-    }
+    public abstract void voice();//abstract wymaga override
 
     public String getName() {
         return name;
