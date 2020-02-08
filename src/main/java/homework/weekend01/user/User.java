@@ -5,7 +5,7 @@
  oraz w jaki sposób można wymusić, aby pole sex przyjęło tylko jedną z dwóch dostępnych wartości
  i czy na pewno String jest właściwym typem (podpowiedź - sprawdzić co to jest Enum).*/
 
-package homework.user;
+package homework.weekend01.user;
 
 import java.util.Scanner;
 

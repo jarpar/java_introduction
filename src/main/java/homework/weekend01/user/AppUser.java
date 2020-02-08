@@ -1,4 +1,4 @@
-package homework.user;
+package homework.weekend01.user;
 
 public class AppUser {
     public static void main(String[] args) {
