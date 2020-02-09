@@ -1,5 +1,7 @@
 package exercises;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public class User {
@@ -43,6 +45,8 @@ public class User {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         User[] user = new User[]{
 
                 new User("Janek", "Jankowy", 25),
@@ -77,7 +81,6 @@ public class User {
         System.out.println("Longest ID is: " + user[place]);
         System.out.println("Mean of users age is: " + mean);
 
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name: ");
         String name = scanner.nextLine();
         System.out.println("Enter lastname: ");
@@ -87,5 +90,11 @@ public class User {
         User user1 = new User(name, lastname, age) {
         };
         System.out.println("Added new user: " + user1.toString() + " " + user1.getAge());
+        System.out.println("Enter birthdate YYYY-MM-DD:");
+        String[] birth = scanner.nextLine().split("");
+        LocalDate birthday = LocalDate.parse(scanner.nextLine());
+        LocalDate now = LocalDate.now();
+
+        System.out.println("Your age is " + Period.between(now, birthday));
     }
 }
