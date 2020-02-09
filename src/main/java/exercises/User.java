@@ -61,7 +61,7 @@ public class User {
         int place = 0;
         int longest = 0;
 
-        Double mean = 0D;
+        double mean = 0D;
         for (
                 int i = 0;
                 i < user.length; i++) {
@@ -89,12 +89,30 @@ public class User {
         int age = scanner.nextInt();
         User user1 = new User(name, lastname, age) {
         };
+        scanner.nextLine();
+
         System.out.println("Added new user: " + user1.toString() + " " + user1.getAge());
         System.out.println("Enter birthdate YYYY-MM-DD:");
-        String[] birth = scanner.nextLine().split("");
-        LocalDate birthday = LocalDate.parse(scanner.nextLine());
+        String birth = scanner.nextLine();
+        LocalDate birthday = LocalDate.parse(birth);
         LocalDate now = LocalDate.now();
-
-        System.out.println("Your age is " + Period.between(now, birthday));
+        System.out.println("Your age is " + Period.between(birthday, now).getYears());
     }
 }
+
+/*
+User Janek Jankowy has the same ID initials.
+User Albert Albinos has the same ID initials.
+Longest ID is: Beata Kowalska
+Mean of users age is: 30.833333333333332
+Enter name:
+Jarek
+Enter lastname:
+Partyka
+Enter age:
+31
+Added new user: Jarek Partyka 31
+Enter birthdate YYYY-MM-DD:
+1988-12-23
+Your age is 31
+*/
