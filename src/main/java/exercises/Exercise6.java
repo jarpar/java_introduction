@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Exercise6 {
     public static void main(String[] args) {
-        UserExtended[] users = new UserExtended[100];
+        UserExtended[] users = new UserExtended[10];
         int usersCount = 0;
         String line;
         Scanner scanner = new Scanner(System.in);
