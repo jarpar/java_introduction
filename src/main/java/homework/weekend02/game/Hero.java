@@ -2,12 +2,18 @@ package homework.weekend02.game;
 
 public abstract class Hero {
     enum Journey {
-        NORTH,
-        SOUTH,
-        WEST,
-        EAST
+        LEVEL1,
+        LEVEL2,
+        LEVEL3,
+        LEVEL4,
+        LEVEL5
     }
 
-    void upLevel() {
+    Journey journey() {
+        return null;
+    }
+
+    Journey upLevel() {
+        return null;
     }
 }
