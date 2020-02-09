@@ -13,8 +13,16 @@ public class RegexpTest {
     public static void main(String[] args) {
         Pattern ipPattern = Pattern.compile("\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
         Matcher ipMatcher = ipPattern.matcher(log);
+
+        Pattern datePattern = Pattern.compile("\\d{2}/\\w{3}/\\d{4}");
+        Matcher dateMatcher = datePattern.matcher(log);
+
         while (ipMatcher.find()) {
             System.out.println(ipMatcher.group());
+        }
+        System.out.println("---------------");
+        while (dateMatcher.find()) {
+            System.out.println(dateMatcher.group());
         }
     }
 }
