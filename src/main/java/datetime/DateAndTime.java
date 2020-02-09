@@ -26,7 +26,7 @@ public class DateAndTime {
         DateTimeFormatter teaFormatter = DateTimeFormatter.ofPattern(formatTea);
         LocalDateTime dateTea = LocalDateTime.parse(teaTime, teaFormatter);
         if (LocalDateTime.now().getHour() == 17) {
-            System.out.println(":Yes, you can drink your tea!");
+            System.out.println("Yes, you can drink your tea!");
         } else {
             System.out.println("No, it's " + Duration.between(LocalTime.now(), dateTea).toHours() + " hours to next tea!");
         }
