@@ -9,15 +9,11 @@ public class Calendar {
         System.out.println("Enter date: [yyyy-MM-dd]");
         String input = scanner.nextLine();
         LocalDate localDate = LocalDate.parse(input);
-        //LocalDate localDate = LocalDate.now();
         int dayOfWeek = localDate.getDayOfWeek().getValue();
         int today = localDate.getDayOfMonth();
         int monthLength = localDate.lengthOfMonth();
-
         LocalDate firstDate = LocalDate.parse(input.substring(0, 8) + "01");
         int firstDayOfWeek = firstDate.getDayOfWeek().getValue();
-        System.out.println(firstDate);
-
         int[] calendar = new int[monthLength + dayOfWeek];
         System.out.println(localDate.getMonth());
         System.out.println("Pn Wt Śr Cz Pt Sb Nd");
