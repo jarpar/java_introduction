@@ -22,7 +22,7 @@ public class Calendar {
 //            calendar[i] = 0;
 //        }
         int count = 0;
-        for (int i = firstDayOfWeek - 2; i <= monthLength + dayOfWeek - 2; i++) {
+        for (int i = firstDayOfWeek - 2; i <= monthLength + firstDayOfWeek - 2; i++) {
             calendar[i] = count;
             count++;
         }
